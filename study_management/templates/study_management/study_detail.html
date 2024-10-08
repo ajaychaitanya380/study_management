@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Detail</title>
+</head>
+<body>
+    <h1>{{ study.study_name }}</h1>
+    <p><strong>Phase:</strong> {{ study.study_phase }}</p>
+    <p><strong>Sponsor:</strong> {{ study.sponsor_name }}</p>
+    <p><strong>Description:</strong> {{ study.study_description }}</p>
+    <a href="{% url 'study_edit' study.pk %}">Edit</a>
+    <form method="post" action="{% url 'study_delete' study.pk %}">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{% url 'study_list' %}">Back to Study List</a>
+</body>
+</html>
