@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block content %}
-<div style="background-color: #93a5d4; padding: 20px; min-height: 100vh; font-family: sans-serif;">  <!-- Light blue background -->
-    <h2 style="text-align: center; color: black;">Study Management</h2>  <!-- Heading in black -->
+<div style="background-color: #93a5d4; padding: 20px; min-height: 100vh; font-family: sans-serif;">
+    <h2 style="text-align: center; color: black;">Study Management</h2>
     <form method="POST" action="{% url 'study_delete_multiple' %}">
         {% csrf_token %}
         
-        <table style="width: 100%; border-collapse: collapse; text-align: left; border: 2px solid #000000;"> <!-- Dark black border for table -->
+        <table style="width: 100%; border-collapse: collapse; text-align: left; border: 2px solid #000000;">
             <thead>
-                <tr style="background-color: #93a5d4; text-align: center; border: 2px solid #000000;"> <!-- Dark black border for header row -->
+                <tr style="background-color: #93a5d4; text-align: center; border: 2px solid #000000;">
                     <td style="border: 2px solid #000000;"> </td>
                     <td style="border: 2px solid #000000;">Study Name</td>
                     <td style="border: 2px solid #000000;">Study Phase</td>
@@ -38,10 +38,9 @@
             </tbody>
         </table>
 
-        <!-- Add Study and Delete Study Buttons at the Bottom of the Table -->
         <div style="text-align: left; margin-top: 20px;">
-            <a href="{% url 'study_add' %}" style="padding: 5px 90px; background-color: #4473c5; text-decoration: none; color: white; margin-left: 315px;">Add Study</a> <!-- Button in blue -->
-            <button type="submit" style="padding: 5px 110px; margin-left: 270px; background-color: #4473c5; color: white; border: none;">Delete Study</button> <!-- Button in blue -->
+            <a href="{% url 'study_add' %}" style="padding: 5px 90px; background-color: #4473c5; text-decoration: none; color: white; margin-left: 315px;">Add Study</a>
+            <button type="submit" style="padding: 5px 110px; margin-left: 270px; background-color: #4473c5; color: white; border: none;">Delete Study</button>
         </div>
     </form>
 </div>
